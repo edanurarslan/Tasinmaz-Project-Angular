@@ -1,0 +1,17 @@
+<main class="form-signin w-100 m-auto" style="display: flex; align-items: center; justify-content: center; height: 70vh;">
+  <form *ngIf="isAuthenticated" #loginForm="ngForm" (ngSubmit)="login()">
+    <div class="form-floating">
+      <input class="form-control mr-sm-2" name="kullaniciad" 
+      [(ngModel)]="kullanici.kullaniciad" required type="text" placeholder="Kullanıcı adı">
+      <label for="floatingInput">Kullanıcı Adı</label>
+    </div>
+    <div class="form-floating">
+      <input class="form-control mr-sm-2" name="password" 
+      [(ngModel)]="kullanici.password" required type="password" placeholder="Şifre">
+      <label for="floatingPassword">Şifre</label>
+    </div>
+
+    <button class="btn btn-secondary my-2 my-sm-0" [disabled]="!loginForm.valid"  type="submit" (click)="navigateToEkleme()">Giriş</button>
+
+  </form>
+</main>

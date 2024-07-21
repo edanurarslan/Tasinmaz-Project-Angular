@@ -1,0 +1,42 @@
+.center-table {
+    margin: 40px auto; /* Yukarıdan 50 piksel boşluk bırakarak ortalar */
+    width: 50%;
+  }
+  
+  .center-table table {
+    width: 100%;
+  }
+  
+  .center-table th,
+  .center-table td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .center-buttons {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 10px; 
+  }
+  
+  #search {
+    margin-right: 10px;
+  }

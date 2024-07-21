@@ -1,0 +1,53 @@
+
+<app-nav></app-nav> 
+
+<div class="search-container">
+
+  <input type="text"  id="search" [(ngModel)]="term" pleaceholder="search" >
+
+<button class="btn btn-primary" type="button" id="searchButton">Ara</button>
+  
+</div>
+
+
+
+<div class="center-table">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>E-Mail</th>
+        <th>Rol</th>
+        <th>Adres</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let kullanici of visibleKullanicilar |filter:term">
+        <td><input type="checkbox" (click)="onSelectionChange(kullanici)"></td>
+        <td>{{ kullanici.kullaniciad }}</td>
+        <td>{{ kullanici.kullanicisoyad }}</td>
+        <td>{{ kullanici.email }}</td>
+        <td>{{ kullanici.rol }}</td>
+        <td>{{ kullanici.adres }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="pagination-container">
+  <div class="pagination">
+    <button class="btn btn-primary" (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Önceki</button>
+    <span>{{ currentPage }}</span>
+    <button class="btn btn-primary" (click)="changePage(currentPage + 1)" [disabled]="currentPage * pageSize >= kullanicilar.length">Sonraki</button>
+  </div>
+</div>
+
+<div class="center-buttons">
+  <button class="btn btn-primary" (click)="navigateToEkleme()">Ekle</button>
+  <button class="btn btn-primary" (click)="combined()">Güncelle</button>
+  <button class="btn btn-primary" (click)="combined2()">Sil</button>
+  <button class="btn btn-primary" (click)="exportSelectedToExcel()">Excel</button>
+</div>
+

@@ -1,0 +1,11 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 10px; /* Gerekirse altına bir boşluk bırakabilirsiniz */
+  }
+  
+  #search {
+    margin-right: 10px; /* Arama kutusu ile buton arasında bir boşluk bırakır */
+  }

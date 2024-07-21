@@ -1,0 +1,10 @@
+.container {
+    max-width: 960px;
+  }
+
+  .btn-logout {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+  }
+  

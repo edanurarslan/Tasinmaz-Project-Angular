@@ -1,0 +1,87 @@
+
+<button class="btn btn-danger btn-logout"  (click)="navigateToEkleme()">Çık</button>
+
+<div class="col-md-7 col-lg-8">
+  
+  <form class="form-tasinmazadd" [formGroup]="tasinmazAddForm"  (ngSubmit)="add()">
+
+    <div class="form-group">
+    <label for="il" class="form-label">İl</label>
+        <select class="form-select" id="il" formControlName="il" required>
+          <option value="">İl Seçiniz...</option>
+          <option>Ankara</option>
+        </select>
+        <span class="help-block" *ngIf="tasinmazAddForm.get('il').hasError('required')">
+          Uygun il giriniz.
+        </span>
+
+        <div class="form-group">
+          <label for="ilce" class="form-label">İlçe</label>
+          <select class="form-select" id="ilce" formControlName="ilce" required>
+            <option value="">İlçe Seçiniz...</option>
+            <option>Çankaya</option>
+          </select>
+          <span class="help-block" *ngIf="tasinmazAddForm.get('ilce').hasError('required')">
+            Uygun ilce giriniz.
+          </span>
+        </div>
+        
+        <div class="form-group">
+          <label for="mahalle" class="form-label">Mahalle</label>
+          <select class="form-select" id="mahalle" formControlName="mahalle" required>
+            <option value="">Mahalle Seçiniz...</option>
+            <option>Mustafa Kemal</option>
+          </select>
+          <span class="help-block" *ngIf="tasinmazAddForm.get('mahalle').hasError('required')">
+            Uygun mahalle giriniz.
+          </span>
+        </div>
+
+        <div class="form-group">
+        <label for="ada" class="form-label">Ada</label>
+        <div class="input-group has-validation">
+          <input type="text" class="form-control" id="ada" formControlName="ada" placeholder="Ada Giriniz..." required>
+          <span class="help-block" *ngIf="tasinmazAddForm.get('ada').hasError('required')">
+            Uygun ada giriniz.
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="parsel" class="form-label">Parsel</label>
+        <div class="input-group has-validation">
+          <input type="text" class="form-control" id="parsel" formControlName="parsel" placeholder="Parsel Giriniz..." required>
+          <span class="help-block" *ngIf="tasinmazAddForm.get('parsel').hasError('required')">
+            Uygun parsel giriniz.
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="ada" class="form-label">Nitelik</label>
+        <div class="input-group has-validation">
+          <input type="text" class="form-control" id="nitelik" formControlName="nitelik" placeholder="Nitelik Giriniz..." required>
+          <span class="help-block" *ngIf="tasinmazAddForm.get('nitelik').hasError('required')">
+            Uygun nitelik giriniz.
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="adres" class="form-label">Adres</label>
+        <div class="input-group has-validation">
+          <input type="text" class="form-control" id="adres" formControlName="adres" placeholder="Adres Giriniz..." required>
+        </div>
+      </div>
+
+
+      <button class="w-100 btn btn-primary btn-lg" type="submit" >Ekle</button>
+    </div>
+
+    
+
+
+<!--  (click)="add()"  -->
+
+
+
